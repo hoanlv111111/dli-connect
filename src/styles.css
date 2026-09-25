@@ -1,0 +1,86 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bg: #06141f;
+  --color-bg-elevated: #0b2233;
+  --color-bg-subtle: #123047;
+  --color-fg: #e8f4ff;
+  --color-fg-muted: #9ec2dc;
+  --color-fg-subtle: #6d92ab;
+  --color-border: color-mix(in oklab, #4da8ff 22%, transparent);
+  --color-border-strong: color-mix(in oklab, #4da8ff 40%, transparent);
+  --color-accent: #4da8ff;
+  --color-accent-fg: #041018;
+  --color-ring: #7ec8ff;
+  --color-signal-pos: #5ee0c0;
+  --color-signal-neg: #ff7a88;
+  --color-lock: #ffd56a;
+
+  --font-display: "Nunito", "Segoe UI", sans-serif;
+  --font-sans: "Nunito", "Segoe UI", system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, monospace;
+
+  --radius-xs: 8px;
+  --radius-sm: 12px;
+  --radius-md: 16px;
+  --radius-lg: 22px;
+  --radius-xl: 28px;
+}
+
+@layer base {
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+
+  html,
+  body,
+  #app {
+    min-height: 100%;
+    background: var(--color-bg);
+    color: var(--color-fg);
+    font-family: var(--font-sans);
+  }
+
+  body {
+    margin: 0;
+    background-image:
+      radial-gradient(1200px 500px at 50% -10%, #123a5c 0%, transparent 55%),
+      radial-gradient(800px 400px at 80% 100%, #0a2a22 0%, transparent 50%);
+  }
+}
+
+@keyframes pop-in {
+  from {
+    transform: scale(0.92);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes pulse-ring {
+  0% {
+    box-shadow: 0 0 0 0 color-mix(in oklab, var(--color-accent) 50%, transparent);
+  }
+  100% {
+    box-shadow: 0 0 0 12px transparent;
+  }
+}
+
+.anim-pop {
+  animation: pop-in 280ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.anim-sel {
+  animation: pulse-ring 900ms ease-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .anim-pop,
+  .anim-sel {
+    animation: none;
+  }
+}

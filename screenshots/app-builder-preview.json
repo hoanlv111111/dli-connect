@@ -1,0 +1,36 @@
+{
+  "url": "http://127.0.0.1:8080/",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "SIGNAL",
+      "hasCanvas": false,
+      "bodyTextLen": 121,
+      "bodyTextHash": "f1bd2faf98ba135a3f8062f08adb585b566ed8b5faabbe57219d55a3de86fa68",
+      "bodyTextPrefix": "DLICOM GAME JAM SIGNAL Spark connections in the feed. See who cl",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-preview.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "SIGNAL",
+      "hasCanvas": false,
+      "bodyTextLen": 121,
+      "bodyTextHash": "f1bd2faf98ba135a3f8062f08adb585b566ed8b5faabbe57219d55a3de86fa68",
+      "bodyTextPrefix": "DLICOM GAME JAM SIGNAL Spark connections in the feed. See who cl",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-preview-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/app-builder-preview.json"
+}
